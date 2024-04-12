@@ -2,11 +2,13 @@
     {% for article in blog.articles %}
         <div>
             {% if article.image %}
+                <img
                 src="{{ article.image | img_url: 'medium' }}" 
                 alt="{{ article.image.alt }}"
                 width="{{ image.width }}"
                 height="{{ image.height }}"
                 loading="eager"
+                >
             {% endif %}
         </div>
     {% endfor %}
